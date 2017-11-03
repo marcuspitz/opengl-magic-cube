@@ -1,0 +1,192 @@
+# depslib dependency file v1.0
+1412461725 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\main.cpp
+	<OpenGL/gl.h>
+	<GLUT/glut.h>
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+	<stdio.h>
+	"constantes.h"
+	"Vertice.h"
+	"Cube.h"
+	<unistd.h>
+
+1400537279 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\constantes.h
+
+1400627251 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\include\vertice.h
+
+1402806210 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\include\poligno.h
+	"Transform.h"
+	"BBox.h"
+	"Vertice.h"
+
+1402960470 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\include\transform.h
+	"Vertice.h"
+
+1400623511 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\include\bbox.h
+	"Vertice.h"
+
+1402793570 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\src\poligno.cpp
+	"Poligno.h"
+	<windows.h>
+	<float.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+	"math.h"
+
+1402960467 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\src\transform.cpp
+	"Transform.h"
+	<windows.h>
+	<math.h>
+	<stdio.h>
+
+1399934484 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\src\vertice.cpp
+	"Vertice.h"
+
+1416778978 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\src\cube.cpp
+	"Cube.h"
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+
+1416779604 c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\include\cube.h
+	"Transform.h"
+	"Vertice.h"
+
+1403051965 source:c:\users\marcus\documents\computação gráfica\unidade 4\trabalho n4\resources.rc
+
+1507154625 source:f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+	<stdio.h>
+	"constantes.h"
+	"Vertice.h"
+	"Cube.h"
+	<unistd.h>
+
+1400533679 f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\constantes.h
+
+1400623651 f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\include\vertice.h
+
+1416779604 f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\include\cube.h
+	"Transform.h"
+	"Vertice.h"
+
+1402956870 f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\include\transform.h
+	"Vertice.h"
+
+1403048365 source:f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\resources.rc
+
+1416778978 source:f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\src\cube.cpp
+	"Cube.h"
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+
+1402956867 source:f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\src\transform.cpp
+	"Transform.h"
+	<windows.h>
+	<math.h>
+	<stdio.h>
+
+1399930884 source:f:\backup semestres furb (ava)\backup projetos faculdade marcus\computação gráfica\unidade 4\trabalho n4\src\vertice.cpp
+	"Vertice.h"
+
+1509755169 source:c:\workspace\magic-cube\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+	<stdio.h>
+	"constantes.h"
+	"Vertice.h"
+	"Cube.h"
+	<unistd.h>
+	"Consts.h"
+	"Globals.h"
+
+1400537279 c:\workspace\magic-cube\constantes.h
+
+1509755235 c:\workspace\magic-cube\include\vertice.h
+
+1509755275 c:\workspace\magic-cube\include\cube.h
+	"Transform.h"
+	"Vertice.h"
+
+1509755345 c:\workspace\magic-cube\include\transform.h
+	"Vertice.h"
+
+1507852769 source:c:\workspace\magic-cube\resources.rc
+
+1507854337 source:c:\workspace\magic-cube\src\cube.cpp
+	"Cube.h"
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+
+1402960467 source:c:\workspace\magic-cube\src\transform.cpp
+	"Transform.h"
+	<windows.h>
+	<math.h>
+	<stdio.h>
+
+1399934484 source:c:\workspace\magic-cube\src\vertice.cpp
+	"Vertice.h"
+
+1509665739 c:\workspace\magic-cube\include\consts.h
+
+1509755001 c:\workspace\magic-cube\include\globals.h
+
+1509755169 source:c:\workspace\opengl-magic-cube\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+	<stdio.h>
+	"constantes.h"
+	"Vertice.h"
+	"Cube.h"
+	<unistd.h>
+	"Consts.h"
+	"Globals.h"
+
+1400537279 c:\workspace\opengl-magic-cube\constantes.h
+
+1509755235 c:\workspace\opengl-magic-cube\include\vertice.h
+
+1509755275 c:\workspace\opengl-magic-cube\include\cube.h
+	"Transform.h"
+	"Vertice.h"
+
+1509755345 c:\workspace\opengl-magic-cube\include\transform.h
+	"Vertice.h"
+
+1509665739 c:\workspace\opengl-magic-cube\include\consts.h
+
+1509755001 c:\workspace\opengl-magic-cube\include\globals.h
+
+1507852769 source:c:\workspace\opengl-magic-cube\resources.rc
+
+1509755305 source:c:\workspace\opengl-magic-cube\src\cube.cpp
+	"Cube.h"
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+
+1402960467 source:c:\workspace\opengl-magic-cube\src\transform.cpp
+	"Transform.h"
+	<windows.h>
+	<math.h>
+	<stdio.h>
+
+1399934484 source:c:\workspace\opengl-magic-cube\src\vertice.cpp
+	"Vertice.h"
+
