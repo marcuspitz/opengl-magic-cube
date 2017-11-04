@@ -136,6 +136,26 @@ Vertice* Transform::transformVertice(Vertice *v)
     return vNew;
 }
 
+Vertice* Transform::operator *(Vertice* v) {
+    double x;
+    double y;
+    double z;
+    double w;
+
+    x = this->matrix[0]*v->Getx() + this->matrix[4]*v->Gety() + this->matrix[8]*v->Getz() + this->matrix[12]*v->Getw();
+    y = this->matrix[1]*v->Getx() + this->matrix[5]*v->Gety() + this->matrix[9]*v->Getz() + this->matrix[13]*v->Getw();
+    z = this->matrix[2]*v->Getx() + this->matrix[6]*v->Gety() + this->matrix[10]*v->Getz() + this->matrix[14]*v->Getw();
+    w = this->matrix[3]*v->Getx() + this->matrix[7]*v->Gety() + this->matrix[11]*v->Getz() + this->matrix[15]*v->Getw();
+
+    Vertice *vNew = (Vertice*) malloc(sizeof(Vertice));
+    vNew->Setx(x);
+    vNew->Sety(y);
+    vNew->Setz(z);
+    vNew->Setw(w);
+
+    return vNew;
+}
+
 void Transform::printMatrix()
 {
     printf("\n\n\nMATRIZ\n\n%f-%f-%f-%f\n%f-%f-%f-%f\n%f-%f-%f-%f\n%f-%f-%f-%f\n\n",

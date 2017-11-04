@@ -18,6 +18,7 @@ class Transform
         void makeRotationZ(double degress);
         void multiply(Transform *a);
         Vertice* transformVertice(Vertice *v);
+        Vertice* operator *(Vertice* v);
 
         double* getTransform() {return this->matrix;}
 

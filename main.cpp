@@ -444,7 +444,8 @@ void updateCamera () {
         rotUp = (Transform*) malloc(sizeof(Transform));
         rotUp->initialize();
         rotUp->makeRotationX( ROT_UP );
-        newLook = rotUp->transformVertice(newLook);
+        //newLook = rotUp->transformVertice(newLook);
+        newLook = (*rotUp) * newLook;
     }
 
     if (ROT_LEFT != 0) {
