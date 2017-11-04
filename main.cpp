@@ -352,9 +352,9 @@ void loadColors()
     yellow.R = 1.0;
     yellow.G = 1.0;
     yellow.B = 0.0;
-    red.R = 1;0;
-    red.G = 0;0;
-    red.B = 0;0;
+    red.R = 1.0;
+    red.G = 0.0;
+    red.B = 0.0;
     green.R = 0.0;
     green.G = 1.0;
     green.B = 0.0;
@@ -408,7 +408,9 @@ void updateCamera () {
             , 0,0,0
             , 0,1,0);
 
-    free(posCamera);
+    safeFree(posCamera);
+    safeFree(rotUp);
+    safeFree(rotLeft);
     posCamera = newLook;
 }
 
@@ -445,6 +447,7 @@ void interpolateRotateX(Cube **c, int qtd ) {
         drawable();
         usleep(15000);
     }
+    safeFree(rot);
 }
 
 void interpolateRotateY(Cube **c, int qtd ) {
@@ -460,6 +463,7 @@ void interpolateRotateY(Cube **c, int qtd ) {
         drawable();
         usleep(15000);
     }
+    safeFree(rot);
 }
 
 void interpolateRotateZ(Cube **c, int qtd ) {
@@ -475,6 +479,7 @@ void interpolateRotateZ(Cube **c, int qtd ) {
         drawable();
         usleep(15000);
     }
+    safeFree(rot);
 }
 
 void movementX(int column) {
@@ -534,7 +539,7 @@ void movementX(int column) {
         }
     }
     interpolateRotateX(toIntp, index);
-    free(toIntp);
+    safeFree(toIntp);
 }
 
 void movementY(int line) {
@@ -590,7 +595,7 @@ void movementY(int line) {
         }
     }
     interpolateRotateY(toIntp, index);
-    free(toIntp);
+    safeFree(toIntp);
 }
 
 void movementZ(int depth) {
@@ -646,7 +651,7 @@ void movementZ(int depth) {
         }
     }
     interpolateRotateZ(toIntp, index);
-    free(toIntp);
+    safeFree(toIntp);
 }
 
 void printCubes() {
@@ -661,19 +666,19 @@ void printCubes() {
 void shuffle()
 {
     for (int i = 0; i < 50; i++) {
-        int eixo = rand() % 3;
+        int axis = rand() % 3;
         //x
-        if (eixo == 0){
+        if (axis == 0){
             int mov = rand() % 3;
             movementX(mov);
         }
         //y
-        else if (eixo == 1){
+        else if (axis == 1){
             int mov = rand() % 3;
             movementY(mov);
         }
         //z
-        else if (eixo == 2){
+        else if (axis == 2){
             int mov = rand() % 3;
             movementZ(mov);
         }

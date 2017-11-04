@@ -55,7 +55,8 @@ void Transform::makeScale(double sX, double sY, double sZ)
 
 void Transform::makeRotationX(double degress)
 {
-    double rad = degress * 0.017453292519943295769236907684886;
+    double rad = degress * RAS_DEG_TO_RAD;
+
     this->makeIdenty();
     (*(matrix+5))  =  cos(rad);
     (*(matrix+9))  = -sin(rad);
@@ -65,7 +66,8 @@ void Transform::makeRotationX(double degress)
 }
 void Transform::makeRotationY(double degress)
 {
-    double rad = degress * 0.017453292519943295769236907684886;
+    double rad = degress * RAS_DEG_TO_RAD;
+
     this->makeIdenty();
     (*(matrix+0))  =  cos(rad);
     (*(matrix+8))  =  sin(rad);
@@ -75,7 +77,8 @@ void Transform::makeRotationY(double degress)
 }
 void Transform::makeRotationZ(double degress)
 {
-    double rad = degress * 0.017453292519943295769236907684886;
+    double rad = degress * RAS_DEG_TO_RAD;
+
     this->makeIdenty();
     (*(matrix+0))  =  cos(rad);
     (*(matrix+4))  = -sin(rad);

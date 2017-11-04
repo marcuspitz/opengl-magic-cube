@@ -21,3 +21,10 @@ RGB green;
 RGB blue;
 RGB orange;
 RGB black;
+
+void safeFree(void* a) {
+    if (a != NULL) {
+        //printf("safe freeeee");
+        free(a);
+    }
+}

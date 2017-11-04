@@ -2,7 +2,7 @@
 #define TRANSFORM_H
 
 #include "Vertice.h"
-
+static float RAS_DEG_TO_RAD = 0.017453292519943295769236907684886;
 class Transform
 {
     public:
@@ -22,10 +22,9 @@ class Transform
 
         double* getTransform() {return this->matrix;}
 
-        float RAS_DEG_TO_RAD = 0.017453292519943295769236907684886;
     private:
         double *matrix;
         void printMatrix();
-};
 
+};
 #endif // TRANSFORM_H
