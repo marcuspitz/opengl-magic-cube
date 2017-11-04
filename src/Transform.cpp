@@ -84,8 +84,7 @@ void Transform::makeRotationZ(double degress)
     //printMatrix();
 }
 
-void Transform::multiply(Transform *a)
-{
+Transform* Transform::operator * (Transform *a) {
     double *m2 = this->getTransform();
     double *t  = a->getTransform();
     double *result = (double*) malloc(sizeof(double)*16);
@@ -112,48 +111,20 @@ void Transform::multiply(Transform *a)
 
     free(matrix);
     matrix = result;
-    //printMatrix();
-}
-
-Vertice* Transform::transformVertice(Vertice *v)
-{
-    double x;
-    double y;
-    double z;
-    double w;
-
-    x = matrix[0]*v->Getx()  + matrix[4]*v->Gety() + matrix[8]*v->Getz()  + matrix[12]*v->Getw();
-    y = matrix[1]*v->Getx()  + matrix[5]*v->Gety() + matrix[9]*v->Getz()  + matrix[13]*v->Getw();
-    z = matrix[2]*v->Getx()  + matrix[6]*v->Gety() + matrix[10]*v->Getz() + matrix[14]*v->Getw();
-    w = matrix[3]*v->Getx()  + matrix[7]*v->Gety() + matrix[11]*v->Getz() + matrix[15]*v->Getw();
-
-    Vertice *vNew = (Vertice*) malloc(sizeof(Vertice));
-    vNew->Setx(x);
-    vNew->Sety(y);
-    vNew->Setz(z);
-    vNew->Setw(w);
-    //printMatrix();
-    return vNew;
 }
 
 Vertice* Transform::operator *(Vertice* v) {
-    double x;
-    double y;
-    double z;
-    double w;
+    double x = this->matrix[0]*v->Getx() + this->matrix[4]*v->Gety() + this->matrix[8]*v->Getz() + this->matrix[12]*v->Getw();
+    double y = this->matrix[1]*v->Getx() + this->matrix[5]*v->Gety() + this->matrix[9]*v->Getz() + this->matrix[13]*v->Getw();
+    double z = this->matrix[2]*v->Getx() + this->matrix[6]*v->Gety() + this->matrix[10]*v->Getz() + this->matrix[14]*v->Getw();
+    double w = this->matrix[3]*v->Getx() + this->matrix[7]*v->Gety() + this->matrix[11]*v->Getz() + this->matrix[15]*v->Getw();
 
-    x = this->matrix[0]*v->Getx() + this->matrix[4]*v->Gety() + this->matrix[8]*v->Getz() + this->matrix[12]*v->Getw();
-    y = this->matrix[1]*v->Getx() + this->matrix[5]*v->Gety() + this->matrix[9]*v->Getz() + this->matrix[13]*v->Getw();
-    z = this->matrix[2]*v->Getx() + this->matrix[6]*v->Gety() + this->matrix[10]*v->Getz() + this->matrix[14]*v->Getw();
-    w = this->matrix[3]*v->Getx() + this->matrix[7]*v->Gety() + this->matrix[11]*v->Getz() + this->matrix[15]*v->Getw();
+    v->Setx(x);
+    v->Sety(y);
+    v->Setz(z);
+    v->Setw(w);
 
-    Vertice *vNew = (Vertice*) malloc(sizeof(Vertice));
-    vNew->Setx(x);
-    vNew->Sety(y);
-    vNew->Setz(z);
-    vNew->Setw(w);
-
-    return vNew;
+    return v;
 }
 
 void Transform::printMatrix()

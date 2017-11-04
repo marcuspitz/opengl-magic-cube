@@ -17,59 +17,6 @@
     License: http://www.apache.org/licenses/LICENSE-2.0
 */
 
-/*
-void onMouseClick(int button, int state, int x, int y) {
-    if (state == GLUT_DOWN) {
-        if (button == GLUT_LEFT_BUTTON) {
-            printf("\nMOUSE LEFT CLICKED x:%d y:%d", x, y);
-            moved = true;
-        } else if (button == GLUT_RIGHT_BUTTON) {
-            printf("\nMOUSE RIGHT CLICKED x:%d y:%d", x, y);
-        }
-    } else { //RELEASE
-        if (button == GLUT_LEFT_BUTTON) {
-            moved = false;
-            printf("\nMOUSE LEFT RELEASED x:%d y:%d", x, y);
-
-        } else if (button == GLUT_RIGHT_BUTTON) {
-            printf("\nMOUSE RIGHT RELEASED x:%d y:%d", x, y);
-        }
-    }
-}
-void onMouseMove(int x, int y)
-{
-    printf("Mouse move");
-    if (moved) {
-        int rotX = x - lastX;
-        int rotY = y - lastY;
-
-        if (rotX != 0) {
-            printf("ROT X=%d", rotX);
-            Transform *tX = (Transform*) malloc(sizeof(Transform));
-            tX->initialize();
-            tX->makeRotationX(rotX);
-            Vertice *toFree = posCamera;
-            tX->makeRotationX(rotX);
-            posCamera = tX->transformVertice(posCamera);
-            free(toFree);
-        }
-
-        if (rotY != 0) {
-            printf("ROT Y=%d", rotY);
-            Transform *tY = (Transform*) malloc(sizeof(Transform));
-            tY->initialize();
-            tY->makeRotationY(rotY);
-            Vertice *toFree = posCamera;
-            tY->makeRotationY(rotY);
-            posCamera = tY->transformVertice(posCamera);
-            free(toFree);
-        }
-    }
-    lastX = x;
-    lastY = y;
-    glutPostRedisplay();
-}*/
-
 /**
  The magic is formed like:
     white
@@ -444,15 +391,14 @@ void updateCamera () {
         rotUp = (Transform*) malloc(sizeof(Transform));
         rotUp->initialize();
         rotUp->makeRotationX( ROT_UP );
-        //newLook = rotUp->transformVertice(newLook);
-        newLook = (*rotUp) * newLook;
+        (*rotUp) * newLook;
     }
 
     if (ROT_LEFT != 0) {
         rotLeft = (Transform*) malloc(sizeof(Transform));
         rotLeft->initialize();
         rotLeft->makeRotationY( ROT_LEFT );
-        newLook = rotLeft->transformVertice(newLook);
+        (*rotLeft) * newLook;
     }
 
     ROT_UP   = 0.0;

@@ -144,7 +144,7 @@
 
 1509755001 c:\workspace\magic-cube\include\globals.h
 
-1509799288 source:c:\workspace\opengl-magic-cube\main.cpp
+1509819098 source:c:\workspace\opengl-magic-cube\main.cpp
 	<windows.h>
 	<GL/gl.h>
 	<GL/glut.h>
@@ -159,13 +159,13 @@
 
 1400537279 c:\workspace\opengl-magic-cube\constantes.h
 
-1509755235 c:\workspace\opengl-magic-cube\include\vertice.h
+1509818406 c:\workspace\opengl-magic-cube\include\vertice.h
 
 1509755275 c:\workspace\opengl-magic-cube\include\cube.h
 	"Transform.h"
 	"Vertice.h"
 
-1509802080 c:\workspace\opengl-magic-cube\include\transform.h
+1509819435 c:\workspace\opengl-magic-cube\include\transform.h
 	"Vertice.h"
 
 1509665739 c:\workspace\opengl-magic-cube\include\consts.h
@@ -174,19 +174,19 @@
 
 1507852769 source:c:\workspace\opengl-magic-cube\resources.rc
 
-1509755305 source:c:\workspace\opengl-magic-cube\src\cube.cpp
+1509819627 source:c:\workspace\opengl-magic-cube\src\cube.cpp
 	"Cube.h"
 	<windows.h>
 	<GL/gl.h>
 	<GL/glut.h>
 	<stdio.h>
 
-1509799322 source:c:\workspace\opengl-magic-cube\src\transform.cpp
+1509819455 source:c:\workspace\opengl-magic-cube\src\transform.cpp
 	"Transform.h"
 	<windows.h>
 	<math.h>
 	<stdio.h>
 
-1399934484 source:c:\workspace\opengl-magic-cube\src\vertice.cpp
+1509818414 source:c:\workspace\opengl-magic-cube\src\vertice.cpp
 	"Vertice.h"
 

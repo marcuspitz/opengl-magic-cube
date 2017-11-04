@@ -1,7 +1,6 @@
 #ifndef VERTICE_H
 #define VERTICE_H
 
-
 /*!
   Represent a vertice, composed by X, Y, Z e W
 */

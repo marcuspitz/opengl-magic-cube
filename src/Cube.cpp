@@ -135,9 +135,9 @@ Transform* Cube::getGlobalTransform()
 {
     Transform *result = (Transform*) malloc(sizeof(Transform));
     result->initialize();
-    result->multiply(this->localRotation);
-    result->multiply(this->localScale);
-    result->multiply(this->localTranslation);
+    (*result) * this->localRotation;
+    (*result) * this->localScale;
+    (*result) * this->localTranslation;
     return result;
 }
 
@@ -216,17 +216,17 @@ void Cube::draw()
 
 void Cube::scale(Transform *l)
 {
-    this->localScale->multiply(l);
+    (*this->localScale) * l;
 }
 
 void Cube::rot(Transform *l)
 {
-    this->localRotation->multiply(l);
+    (*this->localRotation) * l;
 }
 
 void Cube::translate(Transform *l)
 {
-    this->localTranslation->multiply(l);
+    (*this->localTranslation) * l;
 }
 
 void Cube::resetTransforms()
